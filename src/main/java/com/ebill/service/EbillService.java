@@ -6,7 +6,7 @@ public class EbillService {
 	public EbillService() {
 		
 	}
-	public EbillService(int units) {
+	public EbillService(int units) throws IllegalArgumentException{
 		this.units = units;
 	}
 
