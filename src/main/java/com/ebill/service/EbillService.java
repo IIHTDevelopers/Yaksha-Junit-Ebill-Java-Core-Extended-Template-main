@@ -13,7 +13,7 @@ public class EbillService {
 	public double calculateBillAmount() {
 		double amount = 0.0;
 
-		if (units > 0) {
+		if (units >= 0) {
 			if (units <= 50)
 				amount = units * 2.60;
 			else if (units <= 100)
@@ -26,8 +26,7 @@ public class EbillService {
 				amount = 130 + 162.50 + 526 + 6200 + ((units - 1000) * 10);
 			else if(units > 5000)
 				amount = 130 + 162.50 + 526 + 6200 + ((units - 1500) * 12);
-			else
-				amount = 0.0;
+			
 		}else
 			amount = 0.0;
 		return amount;
